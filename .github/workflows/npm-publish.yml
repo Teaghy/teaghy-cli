@@ -9,20 +9,7 @@ on:
       - v*
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 10.6.3
-      - run: pnpm install
-
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +20,16 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 10.6.3
+      - run: pnpm install
       - run: pnpm build
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: Checkout to main branch
+        run: |
+          git fetch origin master:master
+          git checkout master
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
