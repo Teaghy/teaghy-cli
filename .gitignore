@@ -1,0 +1,9 @@
+dist
+node_modules
+*.log
+*.lock
+*.swp
+*.swo
+*.swn
+*.swo.tmp
+my-project
