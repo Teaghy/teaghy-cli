@@ -12,10 +12,15 @@
     "pnpm"
   ],
   "author": "Teaghy",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "bin": {
     "tea-cli": "bin/index.js"
   },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts create my-project",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
