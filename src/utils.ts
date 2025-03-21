@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const chalk = require("chalk");
 const fs = require("fs-extra");
-import logSymbols from "log-symbols";
+const logSymbols = require("log-symbols");
 
 export async function checkDirName(dirName: string) {
   const cwd = process.cwd();

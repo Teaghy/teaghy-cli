@@ -1,6 +1,6 @@
 {
   "name": "@teaghy/tea-cli",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "tea-cli",
   "private": false,
   "keywords": [
@@ -36,13 +36,13 @@
     "axios": "^1.8.3",
     "chalk": "^4.1.2",
     "commander": "^13.1.0",
-    "log-symbols": "^7.0.0",
-    "ora": "^5.4.1",
-    "util": "^0.12.5",
     "download-git-repo": "^3.0.2",
     "figlet": "^1.8.0",
     "fs-extra": "^11.3.0",
-    "inquirer": "^8.2.6"
+    "inquirer": "^8.2.6",
+    "log-symbols": "4.1.0",
+    "ora": "^5.4.1",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
