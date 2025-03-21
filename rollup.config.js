@@ -6,5 +6,6 @@ export default {
     dir: 'dist',
     format: 'cjs'
   },
+  external: ['log-symbols'],
   plugins: [typescript()]
 };
